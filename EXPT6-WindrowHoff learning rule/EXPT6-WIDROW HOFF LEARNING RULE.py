@@ -27,7 +27,7 @@ for count in range(2):
         net = np.dot(training_inputs[i], weights)
         del_w = c * np.dot(training_inputs[i], d[i] - net)
         print(del_w)
-        weights = np.add(weights, del_w, out=weights, casting="unsafe")#stackoverflowOP😍
+        weights = np.add(weights, del_w, out=del_w, casting="unsafe")#stackoverflowOP😍
         #weights += del_w(here weights are integers, del_w is float, different dstatype cant't be added )
     print(f'ITERATION {count + 1}:', weights)       
 
